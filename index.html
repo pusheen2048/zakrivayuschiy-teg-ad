@@ -311,12 +311,12 @@
           </div>
         </article>
       </section>
-
-      <div class="save-section">
+  
+     <div class="save-section">
         <button
           class="save-button button"
           type="button"
-          onclick="window['save-dialog'].showModal()"
+          id="save-button"
           aria-controls="save-dialog"
         >
           <svg class="save-button__icon" viewBox="0 0 39 39" aria-hidden="true">
@@ -329,21 +329,34 @@
 
     <dialog class="dialog" id="save-dialog">
       <form method="dialog" class="dialog__form">
-      <svg class="dialog__icon" viewBox="0 0 39 39" aria-hidden="true">
-        <use href="./svg/floppy.svg#floppy" />
-      </svg>
-      <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
-      <button
-        class="dialog__button button"
-        type="button"
-        onclick="window['save-dialog'].close()"
-      >
-        <span class="button__text">ок</span>
-      </button>
+        <svg class="dialog__icon" viewBox="0 0 39 39" aria-hidden="true">
+          <use href="./svg/floppy.svg#floppy" />
+        </svg>
+        <p class="dialog__text">Вставьте дискету, чтобы продолжить</p>
+        <button
+          class="dialog__button button"
+          type="submit"
+          id="close-dialog-button"
+        >
+          <span class="button__text">ОК</span>
+        </button>
       </form>
     </dialog>
 
     <script src="./scripts/like.js"></script>
+    <script>
+      const saveButton = document.getElementById('save-button');
+      const saveDialog = document.getElementById('save-dialog');
+      const closeDialogButton = document.getElementById('close-dialog-button');
+
+      saveButton.addEventListener('click', () => {
+        saveDialog.showModal();
+      });
+
+      closeDialogButton.addEventListener('click', () => {
+        saveDialog.close();
+      });
+    </script>
   </body>
 </html>
-
+ 
