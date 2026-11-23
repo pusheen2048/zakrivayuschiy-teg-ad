@@ -92,15 +92,15 @@
 }
 
 .filter-grayscale {
-  filter: grayscale(80%);
+  filter: grayscale(50%);
 }
 
 .filter-saturate {
-  filter: saturate(250%);
+  filter: saturate(150%);
 }
 
 .filter-hue-rotate {
-  filter: hue-rotate(35deg);
+  filter: hue-rotate(-15deg);
 }
 
 .filter-invert {
@@ -112,11 +112,11 @@
 }
 
 .filter-blur {
-  filter: blur(4px);
+  filter: blur(1px);
 }
 
 .filter-multiple {
-  filter: contrast(120%) hue-rotate(-30deg) saturate(150%);
+  filter: contrast(110%) hue-rotate(-15deg) saturate(110%);
 }
 
 .card__label {
